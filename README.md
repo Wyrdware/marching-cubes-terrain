@@ -19,7 +19,8 @@ This Unity project explores procedurally generated 3D terrain using marching cub
 
 - **Editor Gizmo Visualization**  
   Field values are visualized in the editor for easier debugging and iteration.
-
+  
+![Demo](TerrainVis.png)
 ## How It Works
 
 - Scalar values are generated on the fly with a `ScalarPopulateStrategy` and cached in a dictionary.  
