@@ -1,7 +1,8 @@
-# Marching Cubes Compute
+# Marching Cubes Terrain
 
 This Unity project explores procedurally generated 3D terrain using marching cubes and a scalar field. The terrain supports complex geometry, including overhangs and caves, and is designed to be modular, performant, and extendable for future projects.
 
+![Demo](TerrainSamples.png)
 ## Features
 
 - **Scalar Field-Based Terrain**  
