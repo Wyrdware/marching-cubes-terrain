@@ -5,7 +5,7 @@ This Unity project explores procedurally generated 3D terrain using marching cub
 ## 🧱 Features
 
 - **Scalar Field-Based Terrain**  
-  Terrain is generated from a scalar field stored in a dictionary keyed by `Vector3Int`. Each field value is sampled, cached, and generated on demand using a flexible strategy system.
+  Terrain is generated from a scalar field stored in a dictionary keyed by `Vector3Int`. Each field value is sampled, cached, and generated through a strategie pattern.
 
 - **Marching Cubes Mesh Generation**  
   Chunks are polygonized using the marching cubes algorithm, creating smooth, curved surfaces based on field thresholds.
@@ -30,7 +30,6 @@ This Unity project explores procedurally generated 3D terrain using marching cub
 
 - Expose generation strategy options to the Unity Editor for better design control  
 - Add chunk pooling to reduce instantiation overhead  
-- Add collision support for interaction and gameplay  
 - Implement LOD system to improve rendering performance  
 - Explore multithreading for mesh generation
 
@@ -40,7 +39,6 @@ This system is a strong foundation for procedural games with destructible or lar
 
 - Open-world prototyping
 - Destructible terrain systems
-- High-speed endless runners
 - Procedural level design as a gameplay mechanic
 
 Modifying the scalar field and regenerating chunks already opens up possibilities for terrain deformation and dynamic environments.
