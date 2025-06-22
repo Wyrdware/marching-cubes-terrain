@@ -12,6 +12,7 @@ public class Chunk : MonoBehaviour
 
     public List<Transform> points = new List<Transform>();
     public float radius =3;
+    bool isEmpty = true;
     Mesh mesh;
     MeshFilter meshFilter;
     MeshCollider meshCollider;
@@ -90,8 +91,11 @@ public class Chunk : MonoBehaviour
 
 
     }
+    
     public  void Generate(float size, ScalarField scalarField)
     {
+        bool anyGreater = false;
+        bool anyLesser = false;
         float metersPerUnit = scalarField.GetMetersPerUnit();
         int gridSize = (int) (size / metersPerUnit+1);
 
@@ -118,14 +122,27 @@ public class Chunk : MonoBehaviour
 
                     for(int i = 0; i < 8; i++)
                     {
+
                         cell.val[i] = scalarField.Sample(transform.position + cell.vertices[i]);//ScalarFieldFromPoints(transform.position + cell.vertices[i], size, metersPerUnit);// BoundPerlinNoise3D(transform.position+cell.vertices[i], size , spacing);
+                        if (cell.val[i] > isoLevel)
+                        {
+                            anyGreater = true;
+                        }
+                        else
+                        {
+                            anyLesser = true;
+                        }
                     }
 
-
-                    cells.Add(cell);
-
+                        cells.Add(cell);
                 }
             }
+
+        }
+        if (anyGreater != anyLesser)
+        {
+            //gameObject.SetActive(false);
+            return;
 
         }
         List<Triangle> isoSurface = new List<Triangle>();

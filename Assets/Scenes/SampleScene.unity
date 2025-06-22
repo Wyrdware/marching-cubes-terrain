@@ -532,7 +532,7 @@ MonoBehaviour:
   chunkPrefab: {fileID: 3089403354983623341, guid: 67015601f5dc922468ea2aeb639cf47b,
     type: 3}
   chunkSize: 10
-  renderDistance: 2
+  renderDistance: 3
   scalarField: {fileID: 1691397781}
 --- !u!4 &1149494870
 Transform:
