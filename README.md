@@ -23,10 +23,9 @@ This Unity project explores procedurally generated 3D terrain using marching cub
 ![Demo](TerrainVis.png)
 ## How It Works
 
-- Scalar values are generated on the fly with a `ScalarPopulateStrategy` and cached in a dictionary.  
-- Chunks are created around a target object using a fixed range, then destroyed or reused when out of range.  
+- Scalar values are generated with a `ScalarPopulateStrategy` and cached in a dictionary.  
+- Chunks are created around a target object using a fixed range..  
 - Each chunk samples the scalar field and applies marching cubes to produce a mesh.  
-- Field values can be modified at runtime and clamped between 0 and 1 to ensure stability.  
 
 ## Areas for Improvement
 
